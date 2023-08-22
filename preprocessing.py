@@ -75,7 +75,12 @@ for c_json in cast_info.values():
             cast_lu[cast["id"]] = {
                 k: v
                 for k, v in cast.items()
-                if k in ["name", "original_name", "gender",]
+                if k
+                in [
+                    "name",
+                    "original_name",
+                    "gender",
+                ]
             }
     id_ls = [c["id"] for c in cast_ls]
     id_comb = itertools.combinations(id_ls, 2)
